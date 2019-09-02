@@ -8,9 +8,11 @@
 
 import UIKit
 import CoreLocation
+import NMAKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var mapView: NMAMapView!
     @IBOutlet weak var svStreet: UIStackView!
     @IBOutlet weak var lblStreet: UILabel!
     @IBOutlet weak var svPostalCode: UIStackView!
@@ -43,10 +45,25 @@ class DetailViewController: UIViewController {
             if let error = error {
                 self?.showError(error)
             } else if let result = result {
+                self?.showPosition(result.location.displayPosition, mapView: result.location.mapView)
                 self?.showDetails(result)
-//                self?.showMap(detail)
             }
         }
+    }
+    
+    private func showPosition(_ position: Position, mapView: MapView) {
+        
+        let boundingBox = NMAGeoBoundingBox(topLeft: mapView.topLeft.geoCoordinates(), bottomRight: mapView.bottomRight.geoCoordinates())
+        self.mapView.copyrightLogoPosition = .bottomRight
+        self.mapView.set(boundingBox: boundingBox, animation: .none)
+        
+        addMarker(to: position)
+    }
+    
+    private func addMarker(to position: Position) {
+        
+        let icon = NMAMapMarker(geoCoordinates: position.geoCoordinates(), image: UIImage(named: "location"))
+        mapView.add(icon)
     }
     
     private func showDetails(_ result: Result) {
@@ -91,7 +108,7 @@ class DetailViewController: UIViewController {
     override public var traitCollection: UITraitCollection {
     
         let traitCollections: [UITraitCollection]
-        if UIDevice.current.orientation.isPortrait {
+        if view.bounds.width < view.bounds.height {
             traitCollections = [UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .regular)]
         } else {
             traitCollections = [UITraitCollection(horizontalSizeClass: .regular), UITraitCollection(verticalSizeClass: .compact)]

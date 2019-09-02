@@ -13,6 +13,8 @@ class Services {
     
     private static let defaultSession = URLSession(configuration: .default)
     private static var dataTask: URLSessionDataTask?
+    static let appId = "2mRxp71DipuiYgTukkOG"
+    static let appCode = "UhsZzEig1AqGTSRFp-XT0w"
     
     static func suggestions(query: String,
                             prox: CLLocationCoordinate2D?,
@@ -49,8 +51,8 @@ class Services {
                                              parameters: inout [String: String],
                                              completion: @escaping (T?, Error?) -> Void) {
         
-        parameters["app_id"] = "2mRxp71DipuiYgTukkOG"
-        parameters["app_code"] = "UhsZzEig1AqGTSRFp-XT0w"
+        parameters["app_id"] = appId
+        parameters["app_code"] = appCode
         
         if let language = Locale.current.languageCode {
             parameters["language"] = language

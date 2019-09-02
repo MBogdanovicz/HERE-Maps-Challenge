@@ -53,9 +53,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Q-hA-Bzb">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0B-oR-sZT">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0B-oR-sZT" customClass="NMAMapView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F26-Cl-p5I">
                                         <rect key="frame" x="0.0" y="361" width="414" height="361"/>
@@ -174,6 +173,7 @@
                         <outlet property="lblDistance" destination="1lE-Vq-TBn" id="U9M-rK-8Wx"/>
                         <outlet property="lblPostalCode" destination="nm8-Cm-Kxn" id="1Ve-xF-cjx"/>
                         <outlet property="lblStreet" destination="TT5-XQ-6ZA" id="UZ8-dv-LdJ"/>
+                        <outlet property="mapView" destination="x0B-oR-sZT" id="S71-iG-fNO"/>
                         <outlet property="svDistance" destination="a21-YI-4A2" id="WIH-CZ-MmV"/>
                         <outlet property="svPostalCode" destination="s4Y-u7-ejS" id="G91-LS-nu0"/>
                         <outlet property="svStreet" destination="2J0-3c-dzX" id="foU-Mg-Ock"/>

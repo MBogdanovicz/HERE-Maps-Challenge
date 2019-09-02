@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NMAKit
 
 struct Location: Decodable {
     
@@ -36,16 +37,21 @@ struct LocationDetails: Decodable {
     let displayPosition: Position
     let mapView: MapView
     let address: Address
+}
+
+struct Position: Decodable {
     
-    struct Position: Codable {
-        
-        let latitude: Double
-        let longitude: Double
-    }
+    let latitude: Double
+    let longitude: Double
     
-    struct MapView: Codable {
+    func geoCoordinates() -> NMAGeoCoordinates {
         
-        let topLeft: Position
-        let bottomRight: Position
+        return NMAGeoCoordinates(latitude: latitude, longitude: longitude)
     }
+}
+
+struct MapView: Decodable {
+    
+    let topLeft: Position
+    let bottomRight: Position
 }
