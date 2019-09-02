@@ -25,10 +25,11 @@ struct View: Decodable {
 
 struct Result: Decodable {
     
-    let location: LocationDetail
+    let distance: Double?
+    let location: LocationDetails
 }
 
-struct LocationDetail: Decodable {
+struct LocationDetails: Decodable {
     
     let locationId: String
     let locationType: String

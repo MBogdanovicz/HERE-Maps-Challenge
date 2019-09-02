@@ -50,11 +50,8 @@ class HomeTableViewController: UITableViewController {
         
         if let suggestion = sender as? Suggestion, let controller = segue.destination as? DetailViewController {
             controller.suggestion = suggestion
+            controller.locationCoordinate = locationCoordinate
         }
-    }
-    
-    private func showError(_ error: Error) {
-        
     }
 }
 

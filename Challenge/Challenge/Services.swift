@@ -26,13 +26,19 @@ class Services {
         makeCall(url: "http://autocomplete.geocoder.api.here.com/6.2/suggest.json", parameters: &parameters, completion: completion)
     }
     
-    static func details(locationId: String, completion: @escaping (LocationDetail?, Error?) -> Void) {
+    static func details(locationId: String,
+                        prox: CLLocationCoordinate2D?,
+                        completion: @escaping (Result?, Error?) -> Void) {
         
         var parameters = ["locationid": locationId, "jsonattributes": "1", "gen": "9"]
+        
+        if let prox = prox {
+            parameters["prox"] = "\(prox.latitude),\(prox.longitude)"
+        }
         makeCall(url: "http://geocoder.api.here.com/6.2/geocode.json", parameters: &parameters) { (location: Location?, error) in
             
             if let location = location {
-                completion(location.response.view[0].result[0].location, error)
+                completion(location.response.view[0].result[0], error)
             } else {
                 completion(nil, error)
             }

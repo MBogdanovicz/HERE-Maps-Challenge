@@ -1,0 +1,15 @@
+/* Class = "UINavigationItem"; title = "Locations"; ObjectID = "2bS-xw-Eif"; */
+"2bS-xw-Eif.title" = "Locais";
+
+/* Class = "UILabel"; text = "Distance:"; ObjectID = "2JL-sV-c25"; */
+"2JL-sV-c25.text" = "Distância:";
+
+/* Class = "UILabel"; text = "Coordinates:"; ObjectID = "PaP-kS-gMn"; */
+"PaP-kS-gMn.text" = "Coordenadas:";
+
+/* Class = "UILabel"; text = "Postal code:"; ObjectID = "pFz-83-ymu"; */
+"pFz-83-ymu.text" = "Código postal:";
+
+/* Class = "UILabel"; text = "Street:"; ObjectID = "Waz-V3-N2b"; */
+"Waz-V3-N2b.text" = "Rua:";
+

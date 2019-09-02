@@ -19,8 +19,10 @@
 		9C344D9A231B05B900B6920C /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C344D99231B05B900B6920C /* Suggestions.swift */; };
 		9C344D9C231B0C8500B6920C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C344D9B231B0C8500B6920C /* Services.swift */; };
 		9C344D9F231B288000B6920C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C344D9E231B288000B6920C /* DetailViewController.swift */; };
-		9C344DA1231CAA5000B6920C /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C344DA0231CAA5000B6920C /* LocationDetail.swift */; };
+		9C344DA1231CAA5000B6920C /* LocationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C344DA0231CAA5000B6920C /* LocationDetails.swift */; };
 		9C344DA3231CAB5800B6920C /* LocationDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C344DA2231CAB5800B6920C /* LocationDetail.json */; };
+		9C6F5570231CD0F700B8B3CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6F556E231CD0F700B8B3CE /* InfoPlist.strings */; };
+		9C6F5573231CD36C00B8B3CE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F5572231CD36C00B8B3CE /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +61,11 @@
 		9C344D99231B05B900B6920C /* Suggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
 		9C344D9B231B0C8500B6920C /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		9C344D9E231B288000B6920C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9C344DA0231CAA5000B6920C /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
+		9C344DA0231CAA5000B6920C /* LocationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetails.swift; sourceTree = "<group>"; };
 		9C344DA2231CAB5800B6920C /* LocationDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocationDetail.json; sourceTree = "<group>"; };
+		9C6F556F231CD0F700B8B3CE /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9C6F5571231CD0F700B8B3CE /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
+		9C6F5572231CD36C00B8B3CE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +122,13 @@
 				9C344D70231B022A00B6920C /* Assets.xcassets */,
 				9C344D72231B022A00B6920C /* LaunchScreen.storyboard */,
 				9C344D75231B022A00B6920C /* Info.plist */,
+				9C6F556E231CD0F700B8B3CE /* InfoPlist.strings */,
 				9C344D6D231B022900B6920C /* Challenge.xcdatamodeld */,
 				9C344D99231B05B900B6920C /* Suggestions.swift */,
 				9C344D9B231B0C8500B6920C /* Services.swift */,
 				9C344D9E231B288000B6920C /* DetailViewController.swift */,
-				9C344DA0231CAA5000B6920C /* LocationDetail.swift */,
+				9C344DA0231CAA5000B6920C /* LocationDetails.swift */,
+				9C6F5572231CD36C00B8B3CE /* UIViewControllerExtension.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C344D74231B022A00B6920C /* LaunchScreen.storyboard in Resources */,
+				9C6F5570231CD0F700B8B3CE /* InfoPlist.strings in Resources */,
 				9C344D71231B022A00B6920C /* Assets.xcassets in Resources */,
 				9C344D6C231B022900B6920C /* Main.storyboard in Resources */,
 			);
@@ -283,7 +291,8 @@
 				9C344D9C231B0C8500B6920C /* Services.swift in Sources */,
 				9C344D6F231B022900B6920C /* Challenge.xcdatamodeld in Sources */,
 				9C344D69231B022900B6920C /* HomeTableViewController.swift in Sources */,
-				9C344DA1231CAA5000B6920C /* LocationDetail.swift in Sources */,
+				9C344DA1231CAA5000B6920C /* LocationDetails.swift in Sources */,
+				9C6F5573231CD36C00B8B3CE /* UIViewControllerExtension.swift in Sources */,
 				9C344D9F231B288000B6920C /* DetailViewController.swift in Sources */,
 				9C344D67231B022900B6920C /* AppDelegate.swift in Sources */,
 				9C344D9A231B05B900B6920C /* Suggestions.swift in Sources */,
@@ -326,6 +335,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C344D6B231B022900B6920C /* Base */,
+				9C6F5571231CD0F700B8B3CE /* pt-PT */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -336,6 +346,14 @@
 				9C344D73231B022A00B6920C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9C6F556E231CD0F700B8B3CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6F556F231CD0F700B8B3CE /* pt-PT */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
