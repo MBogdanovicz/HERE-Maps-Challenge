@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct Suggestions: Decodable {
     
@@ -24,7 +25,7 @@ struct Suggestion: Decodable {
     let matchLevel: String
 }
 
-struct Address: Decodable {
+struct Address: Decodable, CoreDataEntity {
     
     let label: String?
     let country: String
@@ -36,4 +37,38 @@ struct Address: Decodable {
     let houseNumber: String?
     let unit: String?
     let postalCode: String?
+    
+    init?(from managedObject: NSManagedObject) {
+        
+        guard let country = managedObject.value(forKey: "country") as? String else {
+            return nil
+        }
+        
+        self.label = managedObject.value(forKey: "label") as? String
+        self.country = country
+        self.state = managedObject.value(forKey: "state") as? String
+        self.county = managedObject.value(forKey: "county") as? String
+        self.city = managedObject.value(forKey: "city") as? String
+        self.district = managedObject.value(forKey: "district") as? String
+        self.street = managedObject.value(forKey: "street") as? String
+        self.houseNumber = managedObject.value(forKey: "houseNumber") as? String
+        self.unit = managedObject.value(forKey: "unit") as? String
+        self.postalCode = managedObject.value(forKey: "postalCode") as? String
+    }
+    
+    func managedObject(in context: NSManagedObjectContext) -> NSManagedObject {
+        let addressMO = NSManagedObject(entity: entity(in: context)!, insertInto: context)
+        addressMO.setValue(label, forKey: "label")
+        addressMO.setValue(country, forKey: "country")
+        addressMO.setValue(state, forKey: "state")
+        addressMO.setValue(county, forKey: "county")
+        addressMO.setValue(city, forKey: "city")
+        addressMO.setValue(district, forKey: "district")
+        addressMO.setValue(street, forKey: "street")
+        addressMO.setValue(houseNumber, forKey: "houseNumber")
+        addressMO.setValue(unit, forKey: "unit")
+        addressMO.setValue(postalCode, forKey: "postalCode")
+        
+        return addressMO
+    }
 }

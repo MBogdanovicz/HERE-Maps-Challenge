@@ -10,6 +10,12 @@
 /* Class = "UILabel"; text = "Postal code:"; ObjectID = "pFz-83-ymu"; */
 "pFz-83-ymu.text" = "Código postal:";
 
+/* Class = "UIButton"; normalTitle = "Save to Favorites"; ObjectID = "PXK-5X-AUX"; */
+"PXK-5X-AUX.normalTitle" = "Salvar aos Favoritos";
+
+/* Class = "UIButton"; selectedTitle = "Remove from Favorites"; ObjectID = "PXK-5X-AUX"; */
+"PXK-5X-AUX.selectedTitle" = "Remover dos Favoritos";
+
 /* Class = "UILabel"; text = "Street:"; ObjectID = "Waz-V3-N2b"; */
 "Waz-V3-N2b.text" = "Rua:";
 

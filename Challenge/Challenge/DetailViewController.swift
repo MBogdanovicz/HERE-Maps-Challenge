@@ -20,7 +20,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblCoordinates: UILabel!
     @IBOutlet weak var svDistance: UIStackView!
     @IBOutlet weak var lblDistance: UILabel!
+    @IBOutlet weak var btnFavorite: UIButton!
+    @IBOutlet weak var barBtnFavorite: UIBarButtonItem!
     
+    private var locationDetails: LocationDetails?
     var suggestion: Suggestion!
     var locationCoordinate: CLLocationCoordinate2D?
     
@@ -28,14 +31,22 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         setTitle()
+        checkFavorite()
         fetchDetails()
     }
     
     private func setTitle() {
         
-        navigationController?.navigationBar.prefersLargeTitles = false
         let address = suggestion.address
         title = address.street ?? address.city ?? address.country
+    }
+    
+    private func checkFavorite() {
+        
+        if Favorite.isFavorite(suggestion.locationId) {
+            btnFavorite.isSelected = true
+            setBarBtnFavoriteImage(isFavorite: true)
+        }
     }
     
     private func fetchDetails() {
@@ -45,6 +56,8 @@ class DetailViewController: UIViewController {
             if let error = error {
                 self?.showError(error)
             } else if let result = result {
+                self?.locationDetails = result.location
+                self?.locationDetails?.distance = result.distance
                 self?.showPosition(result.location.displayPosition, mapView: result.location.mapView)
                 self?.showDetails(result)
             }
@@ -103,6 +116,25 @@ class DetailViewController: UIViewController {
         }
         
         return "\(distance) m"
+    }
+    
+    @IBAction func didTouchFavorite(_ sender: Any) {
+        
+        if let locationDetails = locationDetails {
+            if !btnFavorite.isSelected {
+                Favorite.addToFavorite(locationDetails)
+            } else {
+                Favorite.removeFromFavorite(locationDetails)
+            }
+            
+            btnFavorite.isSelected = !btnFavorite.isSelected
+            setBarBtnFavoriteImage(isFavorite: btnFavorite.isSelected)
+        }
+    }
+    
+    private func setBarBtnFavoriteImage(isFavorite: Bool) {
+        
+        barBtnFavorite.image = isFavorite ? UIImage(named: "favorite-on") : UIImage(named: "favorite-off")
     }
     
     override public var traitCollection: UITraitCollection {

@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName="Address" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="county" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationDetails" maxCount="1" deletionRule="Nullify" destinationEntity="LocationDetails" inverseName="address" inverseEntity="LocationDetails" syncable="YES"/>
+    </entity>
+    <entity name="LocationDetails" representedClassName="LocationDetails" syncable="YES">
+        <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" maxCount="1" deletionRule="Cascade" destinationEntity="Address" inverseName="locationDetails" inverseEntity="Address" syncable="YES"/>
+        <relationship name="displayPosition" maxCount="1" deletionRule="Cascade" destinationEntity="Position" inverseName="locationDetail" inverseEntity="Position" syncable="YES"/>
+        <relationship name="mapView" maxCount="1" deletionRule="Nullify" destinationEntity="MapView" inverseName="locationDetails" inverseEntity="MapView" syncable="YES"/>
+    </entity>
+    <entity name="MapView" representedClassName="MapView" syncable="YES">
+        <relationship name="bottomRight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Position" inverseName="bottomRight" inverseEntity="Position" syncable="YES"/>
+        <relationship name="locationDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationDetails" inverseName="mapView" inverseEntity="LocationDetails" syncable="YES"/>
+        <relationship name="topLeft" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Position" inverseName="topLeft" inverseEntity="Position" syncable="YES"/>
+    </entity>
+    <entity name="Position" representedClassName="Position" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="bottomRight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MapView" inverseName="bottomRight" inverseEntity="MapView" syncable="YES"/>
+        <relationship name="locationDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationDetails" inverseName="displayPosition" inverseEntity="LocationDetails" syncable="YES"/>
+        <relationship name="topLeft" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MapView" inverseName="topLeft" inverseEntity="MapView" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LocationDetails" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Position" positionX="-342.52734375" positionY="68.734375" width="128" height="118"/>
+        <element name="MapView" positionX="-48.65234375" positionY="222.859375" width="128" height="88"/>
+        <element name="Address" positionX="109.33203125" positionY="-139.21484375" width="128" height="210"/>
+    </elements>
 </model>
