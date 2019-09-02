@@ -4,6 +4,12 @@
 /* Class = "UILabel"; text = "Distance:"; ObjectID = "2JL-sV-c25"; */
 "2JL-sV-c25.text" = "Distância:";
 
+/* Class = "UILabel"; text = "Sort by name"; ObjectID = "drS-Yd-xfy"; */
+"drS-Yd-xfy.text" = "Ordenar por nome";
+
+/* Class = "UILabel"; text = "Sort by distance"; ObjectID = "hxj-06-MHc"; */
+"hxj-06-MHc.text" = "Ordenar por distância";
+
 /* Class = "UILabel"; text = "Coordinates:"; ObjectID = "PaP-kS-gMn"; */
 "PaP-kS-gMn.text" = "Coordenadas:";
 
@@ -16,6 +22,12 @@
 /* Class = "UIButton"; selectedTitle = "Remove from Favorites"; ObjectID = "PXK-5X-AUX"; */
 "PXK-5X-AUX.selectedTitle" = "Remover dos Favoritos";
 
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "T3h-Vn-eQC"; */
+"T3h-Vn-eQC.title" = "Favoritos";
+
 /* Class = "UILabel"; text = "Street:"; ObjectID = "Waz-V3-N2b"; */
 "Waz-V3-N2b.text" = "Rua:";
+
+/* Class = "UIButton"; normalTitle = "Go to Favorites"; ObjectID = "zKx-Ki-Bc8"; */
+"zKx-Ki-Bc8.normalTitle" = "Ir para os Favoritos";
 

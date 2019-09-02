@@ -61,7 +61,7 @@ class Favorite {
         let fetchRequest = LocationDetails.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "locationId = %@", locationId)
         
-        if let result = try? context.fetch(fetchRequest), result.count > 0 {
+        if let result = try? context.fetch(fetchRequest), !result.isEmpty {
             return true
         }
         

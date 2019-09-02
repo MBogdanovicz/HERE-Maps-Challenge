@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,7 @@
 		1F788128F0F735E31DE938071E81DDA2 /* Pods-ChallengeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChallengeUITests.modulemap"; sourceTree = "<group>"; };
 		28B2C6D458F3B4D02AFF0D49CB6AE5EC /* Pods-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		35B644CFCB69FED7FCD2C3C2B380D7BB /* Pods-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		396B5113716BB63A87194CE4B016CF7E /* Pods_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Challenge.framework; path = "Pods-Challenge.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		396B5113716BB63A87194CE4B016CF7E /* Pods_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4933B2165861128D24FC0D1346040ACB /* Pods-Challenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Challenge-umbrella.h"; sourceTree = "<group>"; };
 		4EFB164849FC34F3F41B608607F05D03 /* Pods-Challenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Challenge-dummy.m"; sourceTree = "<group>"; };
 		528BB1FD2CF2E09869F38F1CE4FA0857 /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,15 +53,15 @@
 		8053602EA78C828493D63BAF6D68F895 /* Pods-Challenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Challenge-acknowledgements.plist"; sourceTree = "<group>"; };
 		8A8E4631F4A3A4D73D08F35865FBED58 /* Pods-ChallengeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChallengeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		8B0EE5961E6B6B3378BA7F44B842327A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9919DDE012B3F27D76A1C03AFD68B290 /* Pods-ChallengeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChallengeUITests-resources.sh"; sourceTree = "<group>"; };
 		A3C1001E71E8E7843BBE984F2C85D553 /* Pods-ChallengeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChallengeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A4195D76CCF84ADCE50BB1D734933BBC /* Pods-Challenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Challenge-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A553B66E066ADFCCEC234D17528BE802 /* Pods-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB3975182E0A96209912E6C0A52FBCE6 /* Pods-Challenge-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Challenge-resources.sh"; sourceTree = "<group>"; };
 		BA489D7C3213B82D904CAD083DFA7C7C /* Pods-ChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChallengeTests.modulemap"; sourceTree = "<group>"; };
-		BC2E75E2107D7C819681B97566E4AE3A /* Pods_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChallengeTests.framework; path = "Pods-ChallengeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC9E4B1C0946D58059B2ACA8E0E1C636 /* Pods_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChallengeUITests.framework; path = "Pods-ChallengeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2E75E2107D7C819681B97566E4AE3A /* Pods_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9E4B1C0946D58059B2ACA8E0E1C636 /* Pods_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE6A5FDA16625368EC48874B1A74850 /* Pods-ChallengeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChallengeUITests-umbrella.h"; sourceTree = "<group>"; };
 		C1CA374BE0EB86BF91F6A55ACA9C243A /* Pods-ChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChallengeTests-umbrella.h"; sourceTree = "<group>"; };
 		C397C43E259717AD688516E3AB072A70 /* Pods-ChallengeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChallengeTests-resources.sh"; sourceTree = "<group>"; };
@@ -224,7 +224,6 @@
 			children = (
 				2052C07E81C18C466356E034E68AEA80 /* Frameworks */,
 			);
-			name = HEREMapsStarter;
 			path = HEREMapsStarter;
 			sourceTree = "<group>";
 		};
@@ -318,13 +317,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1030;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -386,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -651,6 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

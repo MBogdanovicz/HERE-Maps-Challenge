@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import NMAKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, MapViewProtocol {
 
     @IBOutlet weak var mapView: NMAMapView!
     @IBOutlet weak var svStreet: UIStackView!
@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     private var locationDetails: LocationDetails?
     var suggestion: Suggestion!
     var locationCoordinate: CLLocationCoordinate2D?
+    var currentMarker: NMAMapMarker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,25 +59,10 @@ class DetailViewController: UIViewController {
             } else if let result = result {
                 self?.locationDetails = result.location
                 self?.locationDetails?.distance = result.distance
-                self?.showPosition(result.location.displayPosition, mapView: result.location.mapView)
+                self?.showPosition(result.location.displayPosition, boundingBox: result.location.mapView, mapView: self!.mapView)
                 self?.showDetails(result)
             }
         }
-    }
-    
-    private func showPosition(_ position: Position, mapView: MapView) {
-        
-        let boundingBox = NMAGeoBoundingBox(topLeft: mapView.topLeft.geoCoordinates(), bottomRight: mapView.bottomRight.geoCoordinates())
-        self.mapView.copyrightLogoPosition = .bottomRight
-        self.mapView.set(boundingBox: boundingBox, animation: .none)
-        
-        addMarker(to: position)
-    }
-    
-    private func addMarker(to position: Position) {
-        
-        let icon = NMAMapMarker(geoCoordinates: position.geoCoordinates(), image: UIImage(named: "location"))
-        mapView.add(icon)
     }
     
     private func showDetails(_ result: Result) {
@@ -118,7 +104,7 @@ class DetailViewController: UIViewController {
         return "\(distance) m"
     }
     
-    @IBAction func didTouchFavorite(_ sender: Any) {
+    @IBAction func didTapFavorite(_ sender: Any) {
         
         if let locationDetails = locationDetails {
             if !btnFavorite.isSelected {
