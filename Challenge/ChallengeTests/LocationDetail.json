@@ -1,0 +1,55 @@
+{
+    "response": {
+        "metaInfo": {
+            "timestamp": "2019-08-31T20:39:52.995+0000"
+        },
+        "view": [
+            {
+                "result": [
+                    {
+                        "relevance": 0.0,
+                        "matchLevel": "street",
+                        "location": {
+                            "locationId": "NT_Nbkhx1r9esGYAhcYiq.0xC",
+                            "locationType": "address",
+                            "displayPosition": {
+                                "latitude": -25.09239,
+                                "longitude": -50.16006
+                            },
+                            "mapView": {
+                                "topLeft": {
+                                    "latitude": -25.09118,
+                                    "longitude": -50.16807
+                                },
+                                "bottomRight": {
+                                    "latitude": -25.09357,
+                                    "longitude": -50.15205
+                                }
+                            },
+                            "address": {
+                                "label": "Rua Comendador Miro, Centro, Ponta Grossa - PR, 84010-160, Brasil",
+                                "country": "BRA",
+                                "state": "PR",
+                                "city": "Ponta Grossa",
+                                "district": "Centro",
+                                "street": "Rua Comendador Miro",
+                                "postalCode": "84010-160",
+                                "additionalData": [
+                                    {
+                                        "value": "Brasil",
+                                        "key": "CountryName"
+                                    },
+                                    {
+                                        "value": "Paraná",
+                                        "key": "StateName"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "viewId": 0
+            }
+        ]
+    }
+}

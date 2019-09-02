@@ -1,0 +1,84 @@
+{
+    "suggestions": [
+        {
+            "label": "Brazil, Ponta Grossa, Centro, Rua Comendador Miro",
+            "language": "en",
+            "countryCode": "BRA",
+            "locationId": "NT_Nbkhx1r9esGYAhcYiq.0xC",
+            "address": {
+                "country": "Brazil",
+                "state": "Parana",
+                "city": "Ponta Grossa",
+                "district": "Centro",
+                "street": "Rua Comendador Miro",
+                "postalCode": "84010-160"
+            },
+            "distance": 89,
+            "matchLevel": "street"
+        },
+        {
+            "label": "Brazil, Ponta Grossa, Uvaranas, Rua Comendador Miro",
+            "language": "en",
+            "countryCode": "BRA",
+            "locationId": "NT_KbDHSROdTXZP2uhZE0MjeA",
+            "address": {
+                "country": "Brazil",
+                "state": "Parana",
+                "city": "Ponta Grossa",
+                "district": "Uvaranas",
+                "street": "Rua Comendador Miro",
+                "postalCode": "84010-160"
+            },
+            "distance": 1003,
+            "matchLevel": "street"
+        },
+        {
+            "label": "Brazil, Ponta Grossa, Boa Vista, Rua Comendador Wallace Pina",
+            "language": "en",
+            "countryCode": "BRA",
+            "locationId": "NT_cF4enzqLNsgSXe4FmoHzjD",
+            "address": {
+                "country": "Brazil",
+                "state": "Parana",
+                "city": "Ponta Grossa",
+                "district": "Boa Vista",
+                "street": "Rua Comendador Wallace Pina",
+                "postalCode": "84071-300"
+            },
+            "distance": 4924,
+            "matchLevel": "street"
+        },
+        {
+            "label": "Brazil, Curitiba, Centro, Rua Comendador Araújo",
+            "language": "en",
+            "countryCode": "BRA",
+            "locationId": "NT_a8vCAEQUK4be8yPx3y7z8A",
+            "address": {
+                "country": "Brazil",
+                "state": "Parana",
+                "city": "Curitiba",
+                "district": "Centro",
+                "street": "Rua Comendador Araújo",
+                "postalCode": "80420-000"
+            },
+            "distance": 96574,
+            "matchLevel": "street"
+        },
+        {
+            "label": "Brazil, Curitiba, Uberaba, Avenida Comendador Franco",
+            "language": "en",
+            "countryCode": "BRA",
+            "locationId": "NT_9kPKt81WN0SiavkY3oaCrD",
+            "address": {
+                "country": "Brazil",
+                "state": "Parana",
+                "city": "Curitiba",
+                "district": "Uberaba",
+                "street": "Avenida Comendador Franco",
+                "postalCode": "81530-440"
+            },
+            "distance": 102488,
+            "matchLevel": "street"
+        }
+    ]
+}
