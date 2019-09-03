@@ -8,6 +8,8 @@ target 'Challenge' do
   pod 'HEREMapsStarter'
   # Pods for Challenge
 
+  end
+
   target 'ChallengeTests' do
     inherit! :search_paths
     # Pods for testing
@@ -17,5 +19,3 @@ target 'Challenge' do
     inherit! :search_paths
     # Pods for testing
   end
-
-end

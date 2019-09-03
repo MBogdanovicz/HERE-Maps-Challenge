@@ -67,23 +67,19 @@ class Favorite {
         
         return false
     }
-//
-//    static func reset() {
-//
-//        let context = getContext()
-//        let fetchRequest = getFetchRequest()
-//        let result = try! context.fetch(fetchRequest)
-//
-//        for data in result as! [NSManagedObject] {
-//            context.delete(data)
-//        }
-//
-//        do {
-//            try context.save()
-//        } catch {
-//            print("Failed saving")
-//        }
-//    }
+
+    static func reset() {
+
+        let context = getContext()
+        let fetchRequest = LocationDetails.fetchRequest()
+        let result = try! context.fetch(fetchRequest)
+
+        for data in result as! [NSManagedObject] {
+            context.delete(data)
+        }
+
+        saveContext()
+    }
     
     private static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

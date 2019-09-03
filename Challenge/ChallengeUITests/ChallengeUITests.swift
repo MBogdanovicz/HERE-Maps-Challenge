@@ -10,25 +10,74 @@ import XCTest
 
 class ChallengeUITests: XCTestCase {
 
+    var app: XCUIApplication!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        
+        super.setUp()
         continueAfterFailure = false
+        
+        app = XCUIApplication()
+    }
+    
+    func test1Home() {
+        app.launchArguments = ["-reset"]
+        app.launch()
+        
+        let isDisplaying = app.tables["Home"].exists
+        XCTAssertTrue(isDisplaying)
+    }
+    
+    func test2Search() {
+        let app = XCUIApplication()
+        
+        let searchBarElement = app.searchFields.element
+        
+        searchBarElement.tap()
+        searchBarElement.typeText("Portugal")
+    }
+    
+    func test3Detail() {
+        let cell = app.cells.element(boundBy: 0)
+        XCTAssertTrue(cell.waitForExistence(timeout: 10))
 
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        cell.tap()
+        
+        let detailView = app.otherElements["Details"]
+        XCTAssertTrue(detailView.waitForExistence(timeout: 3))
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test4AddToFavorite() {
+        let button = app.buttons.element(boundBy: 2)
+        
+        XCTAssertFalse(button.isSelected)
+        button.tap()
+        XCTAssertTrue(button.isSelected)
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test5FavoriteList() {
+        let back = app.buttons.element(boundBy: 0)
+        back.tap()
+        
+        let home = app.tables["Home"]
+        XCTAssertTrue(home.waitForExistence(timeout: 3))
+        
+        let favoriteCell = home.cells["FavoriteCell"]
+        let maxScrolls = 10
+        var count = 0
+        while favoriteCell.isHittable == false && count < maxScrolls {
+            app.swipeUp()
+            count += 1
+        }
+        
+        favoriteCell.tap()
+        
+        let favoritesView = app.otherElements["Favorites"]
+        XCTAssertTrue(favoritesView.waitForExistence(timeout: 3))
+        
+        let cancel = app.buttons.element(boundBy: 0)
+        cancel.tap()
+        
+        app.terminate()
     }
-
 }

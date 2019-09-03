@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F57822326D23FDCDD02D5D8 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D829BED7B27E7EF7753B563 /* Pods_Challenge.framework */; };
-		83B82F982EF26C18C7A25CB4 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF4FD397963EFBE773EC0F0 /* Pods_ChallengeTests.framework */; };
 		9C0669E9231CFE5800BB028E /* location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0669E6231CFE5700BB028E /* location@3x.png */; };
 		9C0669EA231CFE5800BB028E /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0669E7231CFE5700BB028E /* location.png */; };
 		9C0669EB231CFE5800BB028E /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0669E8231CFE5800BB028E /* location@2x.png */; };
@@ -33,7 +32,8 @@
 		9C56A335231DE04200C1AD4E /* ChallengeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56A334231DE04200C1AD4E /* ChallengeServiceTests.swift */; };
 		9C6F5570231CD0F700B8B3CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6F556E231CD0F700B8B3CE /* InfoPlist.strings */; };
 		9C6F5573231CD36C00B8B3CE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F5572231CD36C00B8B3CE /* UIViewControllerExtension.swift */; };
-		B74AF2B23FA98A6F0E6270C6 /* Pods_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C735AAA1B35774EA82091634 /* Pods_ChallengeUITests.framework */; };
+		C8B364290F77789B377E06A3 /* libPods-ChallengeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18EEF101CCBA26BFD97CF10 /* libPods-ChallengeUITests.a */; };
+		FBF631D8936376995F822609 /* libPods-ChallengeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D25FB90CD00237D7F6A44A0D /* libPods-ChallengeTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		138D54BDCE2F65237E77BF5C /* Pods-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge/Pods-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		1F0EFBB8D4D4A2737FD4F18D /* Pods-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeTests/Pods-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		413B703E1987DEBB33FB1EF1 /* Pods-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeUITests/Pods-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7EF4FD397963EFBE773EC0F0 /* Pods_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D829BED7B27E7EF7753B563 /* Pods_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9332CF210E0759684F1E65DD /* Pods-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeTests/Pods-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0669E6231CFE5700BB028E /* location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@3x.png"; sourceTree = "<group>"; };
@@ -91,9 +90,10 @@
 		9C6F556F231CD0F700B8B3CE /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9C6F5571231CD0F700B8B3CE /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
 		9C6F5572231CD36C00B8B3CE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		C735AAA1B35774EA82091634 /* Pods_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25FB90CD00237D7F6A44A0D /* libPods-ChallengeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChallengeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D469A9C90AC32C065103B81A /* Pods-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeUITests/Pods-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D79D9F23972CEF63B600FA56 /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge/Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		E18EEF101CCBA26BFD97CF10 /* libPods-ChallengeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChallengeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B82F982EF26C18C7A25CB4 /* Pods_ChallengeTests.framework in Frameworks */,
+				FBF631D8936376995F822609 /* libPods-ChallengeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74AF2B23FA98A6F0E6270C6 /* Pods_ChallengeUITests.framework in Frameworks */,
+				C8B364290F77789B377E06A3 /* libPods-ChallengeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				8D829BED7B27E7EF7753B563 /* Pods_Challenge.framework */,
-				7EF4FD397963EFBE773EC0F0 /* Pods_ChallengeTests.framework */,
-				C735AAA1B35774EA82091634 /* Pods_ChallengeUITests.framework */,
+				D25FB90CD00237D7F6A44A0D /* libPods-ChallengeTests.a */,
+				E18EEF101CCBA26BFD97CF10 /* libPods-ChallengeUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -636,10 +636,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Challenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -656,10 +653,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Challenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -676,11 +670,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChallengeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.ChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -697,11 +687,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChallengeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.ChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -717,11 +703,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChallengeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.ChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -737,11 +719,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ChallengeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.criticaltechworks.ChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

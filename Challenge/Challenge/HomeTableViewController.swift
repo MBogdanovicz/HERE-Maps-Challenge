@@ -20,6 +20,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "Home"
         
         configureLocation()
         configureSearchController()
@@ -28,6 +29,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadFavorites()
+        tableView.reloadData()
     }
     
     private func loadFavorites() {
@@ -62,6 +64,8 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GoToFavoritesCell", for: indexPath)
+            cell.accessibilityIdentifier = "FavoriteCell"
+            
             return cell
         }
         
@@ -73,6 +77,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if tableView == self.tableView {
             let suggestion = suggestions![indexPath.row]
             performSegue(withIdentifier: "DetailsSegue", sender: suggestion)
@@ -87,12 +92,12 @@ class HomeTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        resultSearchController.isActive = false
-
         if let suggestion = sender as? Suggestion, let controller = segue.destination as? DetailViewController {
             controller.suggestion = suggestion
             controller.locationCoordinate = locationCoordinate
         } else if segue.identifier == "sortSegue" {
+            resultSearchController.isActive = false
+            
             let popoverViewController = segue.destination as! UITableViewController
             popoverViewController.tableView.delegate = self
             popoverViewController.modalPresentationStyle = .popover

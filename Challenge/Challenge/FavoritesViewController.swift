@@ -19,6 +19,7 @@ class FavoritesViewController: UIViewController, MapViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "Favorites"
         
         loadFavorites()
     }

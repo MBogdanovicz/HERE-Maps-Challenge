@@ -30,7 +30,8 @@ class DetailViewController: UIViewController, MapViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.accessibilityIdentifier = "Details"
+        
         setTitle()
         checkFavorite()
         fetchDetails()
