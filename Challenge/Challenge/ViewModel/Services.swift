@@ -74,7 +74,11 @@ class Services {
 
             if let error = error {
                 DispatchQueue.main.async {
-                    completion(nil, error)
+                    if (error as NSError).code == NSURLErrorCancelled {
+                        completion(nil, nil)
+                    } else {
+                        completion(nil, error)
+                    }
                 }
             } else if let data = data, let response = response as? HTTPURLResponse {
                 
