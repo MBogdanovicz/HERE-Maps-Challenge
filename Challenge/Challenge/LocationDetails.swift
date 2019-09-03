@@ -40,6 +40,16 @@ struct LocationDetails: Decodable, CoreDataEntity {
     let address: Address
     var distance: Double?
     
+    init(locationId: String, locationType: String, displayPosition: Position, mapView: MapView, address: Address, distance: Double? = nil) {
+        
+        self.locationId = locationId
+        self.locationType = locationType
+        self.displayPosition = displayPosition
+        self.mapView = mapView
+        self.address = address
+        self.distance = distance
+    }
+    
     init?(from managedObject: NSManagedObject) {
         
         guard let locationId = managedObject.value(forKey: "locationId") as? String,
@@ -79,6 +89,11 @@ struct Position: Decodable, CoreDataEntity {
     let latitude: Double
     let longitude: Double
     
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+    
     init?(from managedObject: NSManagedObject) {
         
         guard let latitude = managedObject.value(forKey: "latitude") as? Double,
@@ -108,6 +123,11 @@ struct MapView: Decodable, CoreDataEntity {
     
     let topLeft: Position
     let bottomRight: Position
+    
+    init(topLeft: Position, bottomRight: Position) {
+        self.topLeft = topLeft
+        self.bottomRight = bottomRight
+    }
     
     init?(from managedObject: NSManagedObject) {
         

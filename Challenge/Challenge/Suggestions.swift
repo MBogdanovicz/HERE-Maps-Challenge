@@ -38,6 +38,21 @@ struct Address: Decodable, CoreDataEntity {
     let unit: String?
     let postalCode: String?
     
+    init(label: String? = nil, country: String, state: String? = nil, county: String? = nil, city: String? = nil,
+         district: String? = nil, street: String? = nil, houseNumber: String? = nil, unit: String? = nil, postalCode: String? = nil) {
+        
+        self.label = label
+        self.country = country
+        self.state = state
+        self.county = county
+        self.city = city
+        self.district = district
+        self.street = street
+        self.houseNumber = houseNumber
+        self.unit = unit
+        self.postalCode = postalCode
+    }
+    
     init?(from managedObject: NSManagedObject) {
         
         guard let country = managedObject.value(forKey: "country") as? String else {

@@ -1,13 +1,14 @@
 {
     "response": {
         "metaInfo": {
-            "timestamp": "2019-08-31T20:39:52.995+0000"
+            "timestamp": "2019-09-02T04:45:21.009+0000"
         },
         "view": [
             {
                 "result": [
                     {
                         "relevance": 0.0,
+                        "distance": 89.9,
                         "matchLevel": "street",
                         "location": {
                             "locationId": "NT_Nbkhx1r9esGYAhcYiq.0xC",
